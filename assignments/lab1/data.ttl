@@ -1,0 +1,13 @@
+<https://example.org/Digna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://example.org/Person> .
+<https://example.org/Digna> <https://example.org/name> "Digna van Nielen" .
+<https://example.org/Digna> <https://example.org/pronouns> "she/her" .
+<https://example.org/Digna> <https://example.org/jobTitle> "Functional manager" .
+<https://example.org/Digna> <https://example.org/worksFor> <https://id.rijksmuseum.nl/2109266> .
+<https://id.rijksmuseum.nl/2109266> <https://example.org/name> "Rijksmuseum Amsterdam" .
+<https://example.org/Digna> <https://example.org/birthDate> "1983-01-29" .
+<https://example.org/Digna> <https://example.org/email> "d.van.nielen@rijksmuseum.nl" .
+<https://example.org/Digna> <https://example.org/url> "https://www.linkedin.com/in/dignavannielen/" .
+<https://example.org/Digna> <https://example.org/homeLocation> <http://vocab.getty.edu/tgn/7006792> .
+<http://vocab.getty.edu/tgn/7006792> <https://example.org/name> "Rotterdam" .
+<https://example.org/Digna> <https://example.org/knows> "Jeroen De Meester" .
+<https://example.org/Digna> <https://example.org/knows> "Minh Tran" .

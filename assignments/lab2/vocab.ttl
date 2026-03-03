@@ -1,0 +1,50 @@
+@prefix me: <https://github.com/YOUR_USERNAME/YOUR_REPO/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+me:Person a rdfs:Class ;
+    rdfs:subClassOf schema:Person ;
+    rdfs:label "Person"@en ;
+    rdfs:label "Persoon"@nl ;
+    rdfs:comment "A human being"@en ;
+    rdfs:comment "Een mens"@nl .
+
+me:name a rdf:Property ;
+    rdfs:subPropertyOf schema:name ;
+    rdfs:label "Name"@en ;
+    rdfs:label "Naam"@nl ;
+    rdfs:comment "A name for a person or institution"@en ;
+    rdfs:comment "Een naam voor een persoon of instituut"@nl ;
+    rdfs:domain me:Person ;
+    rdfs:range xsd:string .
+
+me:pronouns a rdf:Property ;
+    rdfs:subPropertyOf schema:pronouns ;
+    rdfs:label "Pronouns"@en ;
+    rdfs:label "Voornaamwoorden"@nl ;
+    rdfs:comment "The pronouns used by a person"@en ;
+    rdfs:comment "De voornaamwoorden van een persoon"@nl ;
+    rdfs:domain me:Person ;
+    rdfs:range xsd:string .
+
+jobTitle
+
+
+worksFor
+
+
+birthDate
+
+
+
+email
+
+
+url
+
+homeLocation
+
+
+knows

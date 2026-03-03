@@ -1,0 +1,28 @@
+{
+  "@context": "http://schema.org/",
+  "@type": "Person",
+  "name": "Digna van Nielen",
+  "pronouns": "she/her",
+  "jobTitle": "Functional manager",
+  "worksFor": { 
+    "name": "Rijksmuseum Amsterdam", 
+    "id": "https://id.rijksmuseum.nl/2109266"
+    },
+  "birthDate": "1983-01-29",
+  "email": "d.van.nielen@rijksmuseum.nl",
+  "url": "https://www.linkedin.com/in/dignavannielen/",
+  "homeLocation": {
+    "term": "Rotterdam",
+    "id": "http://vocab.getty.edu/tgn/7006792"
+  },
+  "knows": [
+    {
+        "name": "Jeroen De Meester",
+        "@type": "Person"
+    },
+    {
+        "name": "Minh Tran",
+        "@type": "Person"
+    }
+  ]
+}
