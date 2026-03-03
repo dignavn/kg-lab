@@ -1,9 +1,16 @@
-@prefix kglab: <https://github.com/YOUR_USERNAME/YOUR_REPO/> .
+@prefix kglab: <https://github.com/dignavn/kg-lab/blob/main/assignments/lab2/vocab.ttl> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix schema: <https://schema.org/> .
 
+# Ontology metadata
+<https://github.com/YOUR_USERNAME/YOUR_REPO/>
+    a owl:Ontology ;
+    rdfs:label "KGLab Ontology"@en .
+
+# Classes
 kglab:Person a rdfs:Class ;
     rdfs:subClassOf schema:Person ;
     rdfs:label "Person"@en ;
@@ -18,13 +25,15 @@ kglab:Organization a rdfs:Class ;
     rdfs:comment "An organization like a group, company or institution"@en ;
     rdfs:comment "Een organisatie zoals een groep, bedrijf of instituut"@nl .
 
+# Properties
 kglab:name a rdf:Property ;
     rdfs:subPropertyOf schema:name ;
     rdfs:label "Name"@en ;
     rdfs:label "Naam"@nl ;
     rdfs:comment "A name for a person or institution"@en ;
     rdfs:comment "Een naam voor een persoon of instituut"@nl ;
-    rdfs:domain kglab:Person kglab:Organization;
+    schema:domainIncludes kglab:Person ;
+    schema:domainIncludes kglab:Organization ;
     rdfs:range xsd:string .
 
 kglab:pronouns a rdf:Property ;
@@ -48,30 +57,49 @@ kglab:jobTitle a rdf:Property ;
 kglab:worksFor a rdf:Property ;
     rdfs:subPropertyOf schema:worksFor ;
     rdfs:label "Works for"@en ;
-    rdfs:label "Werkt voor"@nl '
+    rdfs:label "Werkt voor"@nl ;
     rdfs:comment "The company or institution a person works for"@en ;
     rdfs:comment "Het bedrijf of instituut waar een persoon werkt"@nl ;
     rdfs:domain kglab:Person ;
-    rdfs:range xsd:string .
+    rdfs:range kglab:Organization .
 
-kglab:birthDate a rdf:Property
+kglab:birthDate a rdf:Property ;
     rdfs:subPropertyOf schema:birthDate ;
     rdfs:label "Birth date"@en ;
-    rdfs:label "Geboortedatum"@nl '
+    rdfs:label "Geboortedatum"@nl ;
+    rdfs:comment "The birth date of a person"@en ;
+    rdfs:comment "De geboortedatum van een persoon"@nl ;
     rdfs:domain kglab:Person ;
-    rdfs:range xsd:date.
+    rdfs:range xsd:date .
 
-kglab:email a rdf:Property
+kglab:email a rdf:Property ;
+    rdfs:subPropertyOf schema:email
     rdfs:label "Email address"@en ;
-    rdfs:label "E-mailadres"@nl '
-    rdfs:domain kglab:Person kglab:Organization ;
-    rdfs:range xsd:string.
+    rdfs:label "E-mailadres"@nl ;
+    schema:domainIncludes kglab:Person ;
+    schema:domainIncludes kglab:Organization ;
+    rdfs:range xsd:string .
+
+kglab:url a rdf:Property ;
+    rdfs:label "Website"@en ;
+    rdfs:label "Website"@nl ;
+    schema:domainIncludes kglab:Person ;
+    schema:domainIncludes kglab:Organization ;
+    rdfs:range xsd:anyURI .
 
 
+kglab:homeLocation a rdf:Property ;
+    rdfs:subPropertyOf schema:homeLocation ;
+    rdfs:label "Home town"@en ;
+    rdfs:label "Thuisstad"@nl ;
+    rdfs:comment "A contact location for a person"@en ;
+    rdfs:comment "Een contactlocatie voor een persoon"@nl ;
+    rdfs:domain kglab:Person ;
+    rdfs:range schema:Place .
 
-url
-
-homeLocation
-
-
-knows
+kglab:knows a rdf:Property ;
+    rdfs:subPropertyOf schema:knows ;
+    rdfs:label "Knows"@en ;
+    rdfs:label "Kent"@nl ;
+    rdfs:domain kglab:Person ;
+    rdfs:range kglab:Person .
