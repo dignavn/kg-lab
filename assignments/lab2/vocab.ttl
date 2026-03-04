@@ -75,31 +75,15 @@ kglab:birthDate a rdf:Property ;
 kglab:email a rdf:Property ;
     rdfs:subPropertyOf schema:email
     rdfs:label "Email address"@en ;
-    rdfs:label "E-mailadres"@nl ;
-    schema:domainIncludes kglab:Person ;
-    schema:domainIncludes kglab:Organization ;
-    rdfs:range xsd:string .
-
-kglab:url a rdf:Property ;
-    rdfs:label "Website"@en ;
-    rdfs:label "Website"@nl ;
-    schema:domainIncludes kglab:Person ;
-    schema:domainIncludes kglab:Organization ;
-    rdfs:range xsd:anyURI .
+    rdfs:label "E-mailadres"@nl '
+    rdfs:domain kglab:Person kglab:Organization ;
+    rdfs:range xsd:string.
 
 
-kglab:homeLocation a rdf:Property ;
-    rdfs:subPropertyOf schema:homeLocation ;
-    rdfs:label "Home town"@en ;
-    rdfs:label "Thuisstad"@nl ;
-    rdfs:comment "A contact location for a person"@en ;
-    rdfs:comment "Een contactlocatie voor een persoon"@nl ;
-    rdfs:domain kglab:Person ;
-    rdfs:range schema:Place .
 
-kglab:knows a rdf:Property ;
-    rdfs:subPropertyOf schema:knows ;
-    rdfs:label "Knows"@en ;
-    rdfs:label "Kent"@nl ;
-    rdfs:domain kglab:Person ;
-    rdfs:range kglab:Person .
+url
+
+homeLocation
+
+
+knows
