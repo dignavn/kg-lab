@@ -12,10 +12,10 @@ kglab:Digna
     kglab:email "d.van.nielen@rijksmuseum.nl" ;
     kglab:url "https://www.linkedin.com/in/dignavannielen/" ;
     kglab:homeLocation kglab:Rotterdam ;
-    kglab:knows <https://jeroen-demeester.github.io/knowledge-graphs-vocab/data.ttl#Jeroen> , <https://minhphtran.github.io/knowledge-graphs-vocab/vocab#> ;
+    kglab:knows <https://jeroen-demeester.github.io/knowledge-graphs-vocab/data.ttl#Jeroen> , <https://minhphtran.github.io/knowledge-graphs-vocab/vocab#> .
 
 #Rijksmuseum
 kglab:Rijksmuseum
     a kglab:Organization ;
     kglab:name "Rijksmuseum Amsterdam" ;
-    schema:identifier <https://id.rijksmuseum.nl/2109266> ;
+    schema:identifier <https://id.rijksmuseum.nl/2109266> .
