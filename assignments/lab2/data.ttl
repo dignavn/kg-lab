@@ -1,4 +1,4 @@
-@prefix kglab: <https://raw.githubusercontent.com/dignavn/kg-lab/refs/heads/main/assignments/lab2/vocab#>
+@prefix kglab: <https://raw.githubusercontent.com/dignavn/kg-lab/refs/heads/main/assignments/lab2/vocab#> .
 @prefix schema: <https://schema.org/> .
 
 #Digna
