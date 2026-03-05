@@ -3,7 +3,7 @@
 
 #Digna
 kglab:Digna 
-    a kglab:Person
+    a kglab:Person ;
     kglab:name "Digna van Nielen" ;
     kglab:pronouns "she/her" ;
     kglab:jobTitle "Functional manager" ;
