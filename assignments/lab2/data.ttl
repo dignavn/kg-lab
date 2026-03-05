@@ -1,5 +1,6 @@
 @prefix kglab: <https://raw.githubusercontent.com/dignavn/kg-lab/refs/heads/main/assignments/lab2/vocab#> .
 @prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 #Digna
 kglab:Digna 
@@ -7,15 +8,14 @@ kglab:Digna
     kglab:name "Digna van Nielen" ;
     kglab:pronouns "she/her" ;
     kglab:jobTitle "Functional manager" ;
-    kglab:worksFor kgklab:Rijksmuseum ;
-    kglab:birthDate "1983-01-01" ;
+    kglab:worksFor kglab:Rijksmuseum ;
+    kglab:birthDate "1983-01-01"^^xsd:date ;
     kglab:email "d.van.nielen@rijksmuseum.nl" ;
-    kglab:url "https://www.linkedin.com/in/dignavannielen/" ;
+    kglab:url "https://www.linkedin.com/in/dignavannielen/"^^xsd:anyURI ;
     kglab:homeLocation kglab:Rotterdam ;
-    kglab:knows <https://jeroen-demeester.github.io/knowledge-graphs-vocab/data.ttl#Jeroen> , <https://minhphtran.github.io/knowledge-graphs-vocab/vocab#> .
+    kglab:knows <https://jeroen-demeester.github.io/knowledge-graphs-vocab/data.ttl#Jeroen> , <https://minhphtran.github.io/knowledge-graphs-vocab/vocab#Minh> .
 
 #Rijksmuseum
 kglab:Rijksmuseum
     a kglab:Organization ;
-    kglab:name "Rijksmuseum Amsterdam" ;
-    schema:identifier <https://id.rijksmuseum.nl/2109266> .
+    kglab:name "Rijksmuseum Amsterdam" .
